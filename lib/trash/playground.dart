@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
 
 class Playground extends StatelessWidget {
-  const Playground({super.key});
+  final List<String> items =
+      List.generate(100, (index) => "Item index: ${index + 1}");
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(
-            10,
-          ),
-          child: Column(
-            children: [
-              Text(
-                "Hello world from Arna Febianti",
-                style: TextStyle(
-                  color: Colors.amber,
-                ),
-              )
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.all(
+          10,
         ),
+        child: ListView.builder(itemBuilder: (BuildContext, int index) {
+          return ListTile(
+            title: Text(items[index]),
+            onTap: () {
+              print("item tapped: ${items[index]}");
+            },
+          );
+        }),
       ),
     );
   }

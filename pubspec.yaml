@@ -69,6 +69,9 @@ flutter:
     - lib/assets/user.png
     - lib/assets/chat.png
     - lib/assets/hamburger.png
+    - lib/assets/save-instagram.png
+    - lib/assets/send.png
+    - lib/assets/bubble-chat.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

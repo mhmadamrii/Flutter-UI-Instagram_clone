@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -72,7 +74,7 @@ class Profile extends StatelessWidget {
                     radius: 50,
                   ),
                   Container(
-                    width: 260,
+                    width: 250,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
