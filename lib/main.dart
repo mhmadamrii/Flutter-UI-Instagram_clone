@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // default function for home is Homepage()
       home: const Homepage(),
+      // home: Playground(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

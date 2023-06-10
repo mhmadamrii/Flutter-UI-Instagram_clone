@@ -222,61 +222,74 @@ class Profile extends StatelessWidget {
               SizedBox(
                 height: _sizedNumber.toDouble(),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color.fromRGBO(238, 238, 238, 0.3),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 53.0,
-                        vertical: 10,
+              Container(
+                width: double.infinity,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                  _profilePath,
+                                ),
+                                radius: 40,
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const Text(
+                                "Miseries",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                        ],
                       ),
-                      child: Text(
-                        "Edit Profile",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 75,
+                            height: 75,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.grey,
+                              ),
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                            child: const CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: Icon(
+                                Icons.add_sharp,
+                                size: 40,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            "New",
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color.fromRGBO(238, 238, 238, 0.3),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 53.0,
-                        vertical: 10,
-                      ),
-                      child: Text(
-                        "Share profile",
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              const Row(
-                children: [
-                  OwnStories(
-                    imgSrc: "https://picsum.photos/id/237/200/300",
-                  ),
-                  OwnStories(
-                    imgSrc: "https://picsum.photos/id/237/200/300",
-                  ),
-                  OwnStories(
-                    imgSrc: "https://picsum.photos/id/237/200/300",
-                  ),
-                ],
+                ),
               )
             ],
           ),
