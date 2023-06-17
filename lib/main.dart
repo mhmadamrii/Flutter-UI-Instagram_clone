@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newest/screens/explore.dart';
 import 'package:newest/screens/home.dart';
+import 'package:newest/screens/new_profile.dart';
 import 'package:newest/screens/post.dart';
 import 'package:newest/screens/profile.dart';
 import 'package:newest/screens/reels.dart';
@@ -38,7 +39,8 @@ class _HomepageState extends State<Homepage> {
     Explore(),
     Post(),
     Reels(),
-    Profile(),
+    // Profile(),
+    NewProfile(),
   ];
   @override
   Widget build(BuildContext context) {
